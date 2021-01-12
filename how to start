@@ -1,0 +1,42 @@
+Ansible
+==========
+prerequsite
+sshpass program
+sudo apt-get install sshpass
+===============================
+---| grep --color=auto "SUCCESS\|$"
+cd /etc
+nano hosts
+----------- kind of DNS
+192.168.0.101 R1
+192.168.0.102 R2
+192.168.0.103 R3
+192.168.0.104 R4
+192.168.0.105 R5
+192.168.0.106 R6
+192.168.0.107 R7
+192.168.0.108 R8
+----------------
+ansible.cfg
+[defaults]
+inventory = ./hosts
+host_key_checking = false
+timeout = 5
+----------------
+hosts
+[routers]
+R2
+R3
+R4
+R5
+R6
+[Rip]
+R5
+R6
+----------------
+-m ( raw meaning no playbook )
+-a is you command in ""
+-u user
+-k asking for the password
+
+ansible R1 -m raw -a "show ip int brie" -u admin -k
