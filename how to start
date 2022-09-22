@@ -1,5 +1,8 @@
 Ansible
 ==========
+sudo apt update
+sudo apt-get install ansible
+==========
 prerequsite
 sshpass program
 sudo apt-get install sshpass
