@@ -1,0 +1,20 @@
+-- etc/ansible/hosts --
+
+set system services netconf ssh
+set system login user robot class super-user authentication plain-text-password
+---------
+pip3 install ncclient
+pip3 install jxmlease
+
+---------> [hosts]
+[all:vars]
+ansible_connection=netconf
+ansible_netconf_user=robot
+ansible_netconf_pass=Kuterek11!!
+ansible_ssh_user=robot
+ansible_ssh_pass=Kuterek11!!
+
+[vsrx]
+192.168.0.100
+---------
+playbook
