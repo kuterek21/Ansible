@@ -1,8 +1,16 @@
--- etc/ansible/hosts --
 
 set system services netconf ssh
 set system login user robot class super-user authentication plain-text-password
 ---------
+-- etc/ansible/hosts --
+
+sudo apt-get update 
+sudo apt-get update -y
+
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update 
+
+sudo apt-get install ansible -y
 pip3 install ncclient
 pip3 install jxmlease
 
