@@ -1,0 +1,13 @@
+# Filename: get_config.yaml
+
+-name: Demonstaration of the netconf_get Asible module
+gather_facts: false
+hosts: all
+tasks:
+- name: get_config RPC
+  netconf_get:
+    display: json
+  register: result
+- name: Print the conf as JSON
+  debug:
+    var: result.output
