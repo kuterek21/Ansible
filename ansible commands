@@ -1,5 +1,5 @@
 RAW adhoc
-ansible routers -m raw "show ip int brie" -u admin -k
+ansible routers -m raw -a "show ip int brie" -u admin -k
 
 with the playbook
 ansible-playbook play.yml
